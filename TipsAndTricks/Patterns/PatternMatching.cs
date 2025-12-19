@@ -7,6 +7,11 @@ namespace TipsAndTricks.Patterns
         public class Order
         {
             public OrderStatus Status { get; set; }
+            public Guid CustomerId { get; internal set; }
+            public string ShippingAddress { get; internal set; }
+            public decimal Discount { get; internal set; }
+            public string PaymentMethod { get; internal set; }
+
             public enum OrderStatus { Pending, Shipped, Cancelled }
 
             public string GetStatusMessage(Order order)
